@@ -15,6 +15,13 @@ public class Fibonacci {
      * @return the nth number of fibonacci sequence.
      */
     public int fib(int n){
-        return 0;
+        if (n <= 1) return n;
+        int num1 = 0, num2 = 1;
+        for (int i = 2; i<=n ; i++) {
+            int cur = num1 + num2;
+            num1 = num2;
+            num2 = cur;
+        }
+        return num2;
     }
 }
